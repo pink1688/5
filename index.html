@@ -1,225 +1,99 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大芊世界 | 曉芊 JQueen - 宇宙的陪伴者</title>
+    <title>探索世界 | 芊芊旅遊誌</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400&display=swap');
-        
-        :root {
-            --gold: #C5A059;
-            --warm-bg: #FDFBF7;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700&display=swap');
         body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
-        h1, h2, h3, .serif { font-family: 'Noto Serif TC', serif; }
-        
-        .bg-spiritual { background-color: var(--warm-bg); }
-        .text-gold { color: var(--gold); }
-        .bg-gold { background-color: var(--gold); }
-        
-        /* 平滑顯現動畫 */
-        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* 影片懸浮效果 */
-        .video-card:hover .play-btn { transform: scale(1.2); color: #FF0000; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.org/photo-1469854523086-cc02fe5d8df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
-<body class="bg-spiritual text-stone-800">
+<body class="bg-stone-50 text-stone-800">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter text-gold flex items-center">
-                <span class="mr-2 italic">大芊世界</span>
-                <span class="text-[10px] tracking-[0.3em] text-stone-400 hidden sm:block uppercase">Soul & Universe</span>
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="text-2xl font-bold tracking-tighter text-blue-600">芊芊旅遊 <span class="text-stone-400 font-light text-sm">TRAVEL</span></div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-blue-500 transition">首頁</a>
+                <a href="#destinations" class="hover:text-blue-500 transition">熱門目的地</a>
+                <a href="#services" class="hover:text-blue-500 transition">旅行服務</a>
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">立即諮詢</a>
             </div>
-            <div class="hidden md:flex space-x-10 text-sm font-medium tracking-widest text-stone-500">
-                <a href="#home" class="hover:text-gold transition">首頁</a>
-                <a href="#videos" class="hover:text-gold transition">熱門影片</a>
-                <a href="#services" class="hover:text-gold transition">服務項目</a>
-                <a href="#testimonials" class="hover:text-gold transition">見證</a>
-            </div>
-            <a href="mailto:contact@jqueen.com?subject=預約諮詢洽談&body=您好曉芊，我想了解關於..." 
-               class="bg-stone-900 text-white px-7 py-2.5 rounded-full text-xs font-bold hover:bg-gold transition shadow-lg transform hover:-translate-y-1">
-               立即洽談
-            </a>
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen flex items-center pt-20 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8 reveal active">
-                <div class="inline-flex items-center space-x-3">
-                    <span class="h-px w-8 bg-gold"></span>
-                    <span class="text-gold font-bold tracking-[0.2em] text-xs uppercase">神佛公佈欄</span>
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white px-6">
+        <div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">下一站，去哪裡？</h1>
+            <p class="text-xl md:text-2xl font-light mb-10 max-w-2xl mx-auto">跳脫日常的框架，讓我們一起探索那些被世界遺忘的角落。</p>
+            <a href="#destinations" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition shadow-xl">
+                開始探索 <i class="fas fa-compass ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="destinations" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4 italic">精選目的地</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group overflow-hidden rounded-2xl shadow-lg bg-white">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.org/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="風景" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
-                <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] text-stone-900">
-                    探索靈魂與<br><span class="text-gold italic">宇宙的陪伴</span>
-                </h1>
-                <p class="text-lg text-stone-500 leading-relaxed max-w-md">
-                    「媽祖就像媽媽，她不給長篇大論，而是坐下來聽你叨位。」我們透過感知，陪你找回內在的平靜力量。
-                </p>
-                <div class="flex items-center space-x-6">
-                    <a href="#videos" class="bg-gold text-white px-9 py-4 rounded-xl hover:shadow-2xl transition-all duration-300 font-bold">開始探索</a>
-                    <a href="https://youtube.com/@JQueenWorld" target="_blank" class="text-stone-400 hover:text-red-600 transition flex items-center">
-                        <i class="fab fa-youtube text-2xl mr-2"></i>訂閱頻道
-                    </a>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">高山密境</h3>
+                    <p class="text-stone-500 text-sm mb-4">感受呼吸間的清新，與大自然進行一場無聲的對話。</p>
+                    <span class="text-blue-600 font-bold">$12,800 起</span>
                 </div>
             </div>
-            <div class="relative reveal active" style="transition-delay: 200ms;">
-                <div class="rounded-[2rem] overflow-hidden shadow-[0_32px_64px_-15px_rgba(197,160,89,0.3)]">
-                    <img src="https://i.ytimg.com/vi/Z5yq9F_A0RM/maxresdefault.jpg" class="w-full h-auto scale-105" alt="大芊世界影片">
+
+            <div class="group overflow-hidden rounded-2xl shadow-lg bg-white">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.org/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="海灘" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
-                <div class="absolute -bottom-10 -left-10 bg-white/80 backdrop-blur p-6 rounded-2xl shadow-xl hidden lg:block border border-gold/20">
-                    <p class="text-gold font-bold text-xl mb-1 italic">2026 能量預報</p>
-                    <p class="text-[11px] text-stone-400 leading-tight">蛻變的壓縮檔已在進行中<br>現在是調頻的最佳時機</p>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">純淨海灘</h3>
+                    <p class="text-stone-500 text-sm mb-4">細軟白沙與湛藍海水，這裡是夏日唯一的解藥。</p>
+                    <span class="text-blue-600 font-bold">$15,500 起</span>
+                </div>
+            </div>
+
+            <div class="group overflow-hidden rounded-2xl shadow-lg bg-white">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.org/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="京都" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">古都散策</h3>
+                    <p class="text-stone-500 text-sm mb-4">漫步在歷史交織的街道，體驗文化最深層的靈魂。</p>
+                    <span class="text-blue-600 font-bold">$18,900 起</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="videos" class="py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 space-y-4 reveal">
-                <div>
-                    <h2 class="text-4xl font-bold tracking-tight">精選內容</h2>
-                    <p class="text-stone-400 mt-2">從神佛智慧中，看見生活的另一種解答</p>
-                </div>
-                <a href="#" class="text-gold font-bold border-b-2 border-gold pb-1 hover:text-stone-900 hover:border-stone-900 transition">查看全部影片</a>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-10 reveal">
-                <div class="video-card group">
-                    <div class="relative overflow-hidden rounded-3xl aspect-[16/10] shadow-xl">
-                        <img src="https://i.ytimg.com/vi/Z5yq9F_A0RM/hqdefault.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-stone-900/20 group-hover:bg-stone-900/40 transition duration-300 flex items-center justify-center">
-                            <i class="fab fa-youtube play-btn text-6xl text-white/90 transition duration-500 shadow-2xl"></i>
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=Z5yq9F_A0RM" target="_blank" class="absolute inset-0"></a>
-                    </div>
-                    <h3 class="mt-6 font-bold text-xl group-hover:text-gold transition">怎麼快樂過人生？媽祖陪你聊</h3>
-                    <p class="text-sm text-stone-400 mt-3 italic leading-relaxed">「媽祖不說破，但她陪伴你在每一個當下學會安放自己...」</p>
-                </div>
-                
-                <div class="video-card group">
-                    <div class="relative overflow-hidden rounded-3xl aspect-[16/10] shadow-xl bg-stone-100 flex items-center justify-center">
-                        <i class="fas fa-lock text-stone-300 text-3xl"></i>
-                    </div>
-                    <h3 class="mt-6 font-bold text-xl">2026 靈魂碎片的找尋與重塑</h3>
-                    <p class="text-sm text-stone-400 mt-3 italic italic leading-relaxed">當外在波動劇烈，如何透過踏青與感知穩定磁場？</p>
-                </div>
-
-                <div class="video-card group">
-                    <div class="relative overflow-hidden rounded-3xl aspect-[16/10] shadow-xl bg-stone-100 flex items-center justify-center">
-                        <i class="fas fa-lock text-stone-300 text-3xl"></i>
-                    </div>
-                    <h3 class="mt-6 font-bold text-xl">內在媽祖修煉法：慈悲待己</h3>
-                    <p class="text-sm text-stone-400 mt-3 italic leading-relaxed">學會「秀秀」自己，是通往快樂人生的第一步。</p>
-                </div>
-            </div>
+    <footer class="bg-stone-900 text-stone-400 py-12 px-6 text-center">
+        <div class="mb-6">
+            <i class="fab fa-instagram mx-4 text-2xl hover:text-white cursor-pointer"></i>
+            <i class="fab fa-facebook mx-4 text-2xl hover:text-white cursor-pointer"></i>
+            <i class="fab fa-youtube mx-4 text-2xl hover:text-white cursor-pointer"></i>
         </div>
-    </section>
-
-    <section id="services" class="py-32 bg-stone-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20 reveal">
-                <h2 class="text-4xl font-bold mb-4">服務與陪伴</h2>
-                <p class="text-stone-400">當你感到迷惘，我們在這裡陪你整理思緒</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition duration-500 reveal border border-stone-100 group">
-                    <div class="flex justify-between items-center mb-10">
-                        <div class="bg-gold/10 p-4 rounded-2xl">
-                            <i class="fas fa-comment-dots text-3xl text-gold"></i>
-                        </div>
-                        <span class="text-2xl font-bold text-stone-900">$3,600 <span class="text-sm text-stone-400">/ 60min</span></span>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-6">1-on-1 靈魂深度對話</h3>
-                    <ul class="space-y-5 mb-10 text-stone-500 font-light">
-                        <li class="flex items-center"><i class="fas fa-star text-[10px] text-gold mr-4"></i> 曉芊與 Egg 全程陪伴傾聽</li>
-                        <li class="flex items-center"><i class="fas fa-star text-[10px] text-gold mr-4"></i> 針對個人能量波動進行深度解析</li>
-                        <li class="flex items-center"><i class="fas fa-star text-[10px] text-gold mr-4"></i> 尋找當下最適合你的行動建議</li>
-                    </ul>
-                    <a href="mailto:contact@jqueen.com?subject=預約諮詢" class="block text-center w-full bg-stone-900 text-white py-4 rounded-2xl font-bold group-hover:bg-gold transition duration-300 shadow-lg">立即預約對話</a>
-                </div>
-
-                <div class="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition duration-500 reveal border border-stone-100 group" style="transition-delay: 100ms;">
-                    <div class="flex justify-between items-center mb-10">
-                        <div class="bg-stone-100 p-4 rounded-2xl">
-                            <i class="fas fa-book text-3xl text-stone-400"></i>
-                        </div>
-                        <span class="text-2xl font-bold text-stone-900">$599</span>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-6">靈魂成長壓縮檔</h3>
-                    <ul class="space-y-5 mb-10 text-stone-500 font-light">
-                        <li class="flex items-center"><i class="fas fa-check text-xs text-stone-300 mr-4"></i> 2026 宇能量轉化實作指南</li>
-                        <li class="flex items-center"><i class="fas fa-check text-xs text-stone-300 mr-4"></i> 三週蛻變期的穩定心法清單</li>
-                        <li class="flex items-center"><i class="fas fa-check text-xs text-stone-300 mr-4"></i> 內在媽祖覺察練習題庫</li>
-                    </ul>
-                    <button class="block text-center w-full border-2 border-stone-800 text-stone-800 py-4 rounded-2xl font-bold hover:bg-stone-800 hover:text-white transition duration-300">取得電子書</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="py-32 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-12 items-center">
-                <div class="reveal">
-                    <h2 class="text-4xl font-bold mb-6 italic">淚流滿面的<br>感謝與共鳴</h2>
-                    <p class="text-stone-400">這些回饋，是我們持續分享的最大動力。</p>
-                </div>
-                <div class="md:col-span-2 grid md:grid-cols-2 gap-8 reveal" style="transition-delay: 200ms;">
-                    <div class="p-10 bg-stone-50 rounded-[2rem] border border-stone-100">
-                        <p class="text-stone-500 italic leading-relaxed mb-6">"諮詢過後，那種被『秀秀』的感覺真的很真實。我終於學會不糾結、不說破，而是有力量地陪著自己。"</p>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-gold/20 rounded-full mr-4"></div>
-                            <span class="font-bold text-sm text-stone-900">學員 林小姐</span>
-                        </div>
-                    </div>
-                    <div class="p-10 bg-stone-50 rounded-[2rem] border border-stone-100">
-                        <p class="text-stone-500 italic leading-relaxed mb-6">"電子書的練習非常實用。在能量波動劇烈時，靠著曉芊教的調頻法，我穩穩地度過了。"</p>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 bg-stone-200 rounded-full mr-4"></div>
-                            <span class="font-bold text-sm text-stone-900">讀者 陳先生</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-stone-900 text-stone-500 py-24">
-        <div class="max-w-7xl mx-auto px-6 text-center space-y-12">
-            <div class="text-3xl font-bold text-white italic tracking-widest">大芊世界</div>
-            <div class="flex justify-center space-x-10 text-2xl">
-                <a href="#" class="hover:text-gold transition"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="hover:text-gold transition"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:contact@jqueen.com" class="hover:text-gold transition"><i class="fas fa-envelope"></i></a>
-            </div>
-            <div class="pt-12 border-t border-stone-800 text-xs tracking-widest uppercase">
-                &copy; 2026 大芊世界-曉芊JQueen. 探索宇宙，由心開始。
-            </div>
-        </div>
+        <p class="text-xs tracking-widest">© 2026 芊芊旅遊雜誌. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        // Scroll Reveal 邏輯
-        const reveals = document.querySelectorAll('.reveal');
-        window.addEventListener('scroll', () => {
-            reveals.forEach(el => {
-                const windowHeight = window.innerHeight;
-                const revealTop = el.getBoundingClientRect().top;
-                if (revealTop < windowHeight - 100) {
-                    el.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
